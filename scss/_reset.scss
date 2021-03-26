@@ -34,6 +34,15 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: rem(40);
+
+  @media (min-width: 414px) {
+    scroll-padding-top: 14rem;
+  }
+
+  @media (min-width: 375px) {
+    scroll-padding-top: 16rem;
+  }
 }
 
 a {
