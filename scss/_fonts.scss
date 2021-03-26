@@ -13,4 +13,12 @@ h4,
 h5,
 h6 {
   font-family: lust-didone, serif;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+
+  span {
+    color: var(--vine);
+  }
 }

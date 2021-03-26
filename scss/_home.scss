@@ -31,10 +31,6 @@
 
     h1 {
       font-size: rem(56);
-      line-height: 120%;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gold);
       max-width: rem(600);
 
       @media (max-width: 1024px) {
@@ -50,10 +46,6 @@
 
       @media (max-width: 540px) {
         max-width: 100%;
-      }
-
-      span {
-        color: var(--vine);
       }
     }
 
@@ -201,6 +193,140 @@
   
       &:last-child {
         clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+}
+
+.mission {
+  display: flex;
+  align-items: center;
+  margin-top: rem(72);
+  margin-bottom: rem(64);
+  
+  h2 {
+    max-width: rem(580);
+    font-size: rem(48);
+    margin-right: rem(32);
+  }
+
+  p {
+    max-width: rem(488);
+    font-size: rem(18);
+    line-height: 170%;
+    text-align: justify;
+  }
+}
+
+.groom-day {
+  background-color: var(--vine-dark);
+  padding: rem(58) 0;
+
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(64);
+
+    h2 {
+      font-size: rem(40);
+      margin-bottom: rem(32);
+      
+      span {
+        color: var(--white);
+      }
+    }
+
+    p {
+      text-align: center;
+      max-width: rem(572);
+      font-size: rem(18);
+      line-height: 170%;
+    }
+  }
+
+  &-plans {
+    margin-top: rem(64);
+
+    > p {
+      color: var(--gold);
+      text-align: center;
+    }
+
+    &-list {
+      margin-top: rem(32);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(32);
+
+      &_plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: rem(32);
+        border: rem(1) solid #E3942C;
+        border-radius: rem(8);
+
+        h3 {
+          font-size: rem(32);
+          line-height: 100%;
+        }
+
+        p {
+          font-size: rem(12);
+          color: var(--gold);
+        }
+
+        ul {
+          width: 100%;
+          margin: rem(32) 0;
+          padding-left: 1.5rem;
+          list-style: none;
+
+          li {
+            position: relative;
+
+            & + li {
+              margin-top: rem(16);
+            }
+
+            &::before {
+              content: "\2022";
+              font-size: rem(24);
+              color: var(--vine);
+              font-weight: bold;
+              display: inline-block; 
+              position: absolute;
+              bottom: 50%;
+              top: 50%;
+              left: -7%;
+              transform: translate(-50%, -75%);
+              padding: rem(30);
+            }
+          }
+        }
+
+        a {
+          border: 1px solid var(--white);
+          padding: rem(16);
+          display: inline-flex;
+          align-items: center;
+          transition: all 0.2s;
+          margin-top: auto;
+    
+          img {
+            margin-left: rem(24);
+          }
+    
+          &:hover {
+            background-color: var(--vine);
+            border-color: var(--vine);
+            color: var(--gold);
+          }
+        }
       }
     }
   }
