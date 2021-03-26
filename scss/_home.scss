@@ -358,3 +358,88 @@
     }
   }
 }
+
+.beer {
+  background-image: url("../img/beer-bg.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-top: rem(56);
+
+  @media (min-width: 1920px) {
+    background-position: 20% center;
+  }
+
+  @media (max-width: 1024px) {
+    background-position: 80% center;
+  }
+
+  &-content {
+    padding-top: rem(88);
+    padding-bottom: rem(56);
+    margin-left: auto;
+    max-width: 600px;
+
+    @media (max-width: 1024px) {
+      max-width: 560px;
+    }
+
+    h2 {
+      font-size: rem(48);
+    }
+
+    > p {
+      font-size: rem(18);
+      line-height: 170%;
+      margin-top: rem(32);
+    }
+
+    a {
+      border: 1px solid var(--white);
+      padding: rem(16);
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s;
+      margin-top: rem(32);
+
+      img {
+        margin-left: rem(24);
+      }
+
+      &:hover {
+        background-color: var(--vine);
+        border-color: var(--vine);
+        color: var(--gold);
+      }
+    }
+  }
+
+  &-names {
+    margin-top: rem(80);
+
+    @media (max-width: 414px) {
+      p {
+        font-size: rem(20);
+        line-height: 250%;
+      }
+    }
+
+    span {
+      color: var(--vine);
+      font-weight: bold;
+    }
+  }
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(48);
+
+    @media (max-width: 414px) {
+      img {
+        max-width: rem(88);
+      }
+    }
+  }
+}
